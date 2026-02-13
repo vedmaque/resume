@@ -1,1 +1,61 @@
 @import './base.css';
+
+#app {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--page-bg);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  isolation: isolate;
+  overflow: hidden;
+  --mouse-x: 50vw;
+  --mouse-y: 40vh;
+}
+
+#app::before,
+#app::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-size: var(--grid-size) var(--grid-size);
+  background-position: center;
+  z-index: 0;
+}
+
+#app::before {
+  background-image:
+    linear-gradient(var(--grid-base) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-base) 1px, transparent 1px);
+  opacity: 0.45;
+}
+
+#app::after {
+  background-image:
+    linear-gradient(var(--grid-bright) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-bright) 1px, transparent 1px);
+  opacity: 0.9;
+  mask-image: radial-gradient(
+    circle var(--spot-radius) at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0) 70%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle var(--spot-radius) at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0) 70%
+  );
+  transition: mask-position 0.1s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  background: none;
+}

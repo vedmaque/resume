@@ -1,7 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Syne:wght@600;700&display=swap');
+
+:root {
+  --page-bg: #0a0d12;
+  --grid-base: rgba(148, 167, 196, 0.18);
+  --grid-bright: rgba(166, 195, 255, 0.75);
+  --grid-size: 42px;
+  --spot-radius: 220px;
+
+  --text-strong: #e7ecf3;
+  --text-soft: #a0aec1;
+
+  --font-body: 'Space Grotesk', 'Avenir Next', sans-serif;
+  --font-display: 'Syne', 'Space Grotesk', sans-serif;
+
+  --color-background: var(--page-bg);
+  --color-background-soft: #0f141d;
+  --color-background-mute: #141b26;
+
+  --color-border: rgba(160, 190, 255, 0.22);
+  --color-border-hover: rgba(160, 190, 255, 0.4);
+
+  --color-heading: var(--text-strong);
+  --color-text: var(--text-soft);
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--page-bg);
+    --color-background-soft: #0f141d;
+    --color-background-mute: #141b26;
+
+    --color-border: rgba(160, 190, 255, 0.22);
+    --color-border-hover: rgba(160, 190, 255, 0.4);
+
+    --color-heading: var(--text-strong);
+    --color-text: var(--text-soft);
+  }
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  line-height: 1.5;
+  font-family: var(--font-body);
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
