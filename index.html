@@ -1,59 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Frontend Developer</title>
-		<meta name="description" content="Frontend developer" />
-		<meta name="keywords" content="javascript, web development, frontend, front, vedmaque" />
-		<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Poppins:700" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/revealer.css" />
-		<script>document.documentElement.className = 'js';</script>
-	</head>
-	<body class="demo-overview loading">
-		<main>
-			<section class="content content--full flexy intro">
-				<h2 class="content__title content__title--center">
-					<div id="rev-1" class="content__title__inner">Frontend</div><br/>
-					<div id="rev-2" class="content__title__inner content__title__inner--offset-1">Developer</div>
-				</h2>
-			</section>
-		</main>
-		<script src="js/anime.min.js"></script>
-		<script src="js/main.js"></script>
-		<script>
-		(function() {
-			// Fake loading.
-			setTimeout(init, 1000);
-
-			function init() {
-				document.body.classList.remove('loading');
-				
-				var rev1 = new RevealFx(document.querySelector('#rev-1'), {
-					revealSettings : {
-						bgcolor: '#7f40f1',
-						onCover: function(contentEl, revealerEl) {
-							contentEl.style.opacity = 1;
-						}
-					}
-				});
-				rev1.reveal();
-
-				var rev2 = new RevealFx(document.querySelector('#rev-2'), {
-					revealSettings : {
-						bgcolor: '#fcf652',
-						delay: 250,
-						onCover: function(contentEl, revealerEl) {
-							contentEl.style.opacity = 1;
-						}
-					}
-				});
-				rev2.reveal();
-			}
-		})();
-		</script>
-	</body>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
